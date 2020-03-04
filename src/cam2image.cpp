@@ -152,13 +152,16 @@ int main(int argc, char * argv[])
   if (!burger_mode) {
 	  //
 	  // Initialize OpenCV video capture stream.
-#if 0	  
+#if 0
 	  // open your camera 'device 0'
-	  cap.open("0");
+	  cap.open(0);
 #else	  
 	  // Or, put your video path here
       cap.open("C:\\dev\\resource\\highway1.mp4");
 #endif	  
+	  // Set the width and height based on command line arguments.
+	  cap.set(cv::CAP_PROP_FRAME_WIDTH, static_cast<double>(width));
+	  cap.set(cv::CAP_PROP_FRAME_HEIGHT, static_cast<double>(height));
       if (!cap.isOpened()) {
         RCLCPP_ERROR(node_logger, "Could not open video stream");
         return 1;
