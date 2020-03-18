@@ -11,7 +11,7 @@ call c:\opt\ros\dashing\x64\setup.bat
 # Get source
 mkdir c:\dev\ros2_image_ws\src
 cd c:\dev\ros2_image_ws\src
-git clone https://github.com/QQting/image_tools.git
+git clone https://github.com/QQting/ros2_image_tools.git
 ```
 
 Please set correct path to your camera device or a video file in ```src/cam2image.cpp```. If you want to transfer video file, you can download the MP4 file from this site http://rpg.ifi.uzh.ch/E2VID.html
@@ -35,8 +35,8 @@ colcon build --merge-install --event-handlers console_cohesion+
 call install\local_setup.bat
 
 # Publish image
-ros2 run image_tools cam2image
+ros2 run my_tools cam2image -r 0
 
 # Subscribe image
-ros2 run image_tools showimage
+ros2 run my_tools showimage -r 0
 ```
