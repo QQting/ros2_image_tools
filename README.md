@@ -87,6 +87,7 @@ It's recommended to use Windows Terminal to manage multiple terminals with ROS d
 You can copy my settings in ```resource/profiles.json``` and replace current settings. My configuration saves your time typing so many commands in order to load VS2019 environment and ROS environment.
 Please make sure the paths filled in profiles.json are all correct. The paths should be the same if all the softwares are installed in default place.
 
+![image](https://github.com/QQting/ros2_image_tools/blob/dashing/resource/windows_terminal_settings.png)
 ---
 ## Clone this package to your workspace
 
