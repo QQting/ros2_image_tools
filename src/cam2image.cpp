@@ -206,6 +206,9 @@ int main(int argc, char * argv[])
       RCLCPP_INFO(node_logger, "Publishing image #%zd", i);
       pub->publish(std::move(msg));
       ++i;
+    } else {
+      RCLCPP_INFO(node_logger, "Finished");
+      break;
     }
     // Do some work in rclcpp and wait for more to come in.
     rclcpp::spin_some(node);
