@@ -1,4 +1,4 @@
-# Transmit Video Frames from Windows to Ubuntu with ROS 2
+# Transmit Video Frames from Windows to Ubuntu w/ ROS 2
 
 We assume you have already installed ROS 2 on Ubuntu. In this document, we only show you:
 1. How to setup ROS 2 environment and build ROS 2 packages on Windows 10.
