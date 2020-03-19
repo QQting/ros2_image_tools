@@ -1,13 +1,13 @@
-# Transmit Images from Windows to Ubuntu with ROS 2
+# Transmit Video Frames from Windows to Ubuntu with ROS 2
 
-We assume you have already installed ROS 2 on Ubuntu. In this document, we only guide you:
+We assume you have already installed ROS 2 on Ubuntu. In this document, we only show you:
 1. How to setup ROS 2 environment and build ROS 2 packages on Windows 10.
-2. How to use OpenCV along with ROS 2 to send/receive images on local Windows 10 PC.
-3. How to send images from Windows 10 to Ubuntu.
+2. How to use OpenCV along with ROS 2 to send/receive video frames on local Windows 10 PC.
+3. How to send video frames from Windows 10 to Ubuntu.
    
 If you also want to learn how to install ROS 2 on Ubuntu, please check [this](https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Install-Debians/).
 
-## Overall Steps
+## Overall steps
 - Install Microsoft Visual Studio 2019 Community.
 - Install ROS 2 Dashing and all the dependencies on Windows 10.
 - Leverage new **Windows Terminal** for better user experience.
@@ -130,9 +130,19 @@ ros2 run my_tools cam2image -r 0
 ros2 run my_tools showimage -r 0
 ```
 
-Now you can clone this package into Ubuntu, and then use below command to build package:
+Now you can clone this package into Ubuntu, and then use below command to build package on Ubuntu:
 ```
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
-After this, try to run showimage on Ubuntu and cam2image on Windows.
+After this, try to run ```showimage``` on Ubuntu and ```cam2image``` on Windows, you should see the result as below pictures:
+```
+# On Windows
+ros2 run my_tools cam2image -r 0
+```
+![image](https://github.com/QQting/ros2_image_tools/blob/dashing/resource/image_sender.png)
+```
+# On Ubuntu
+ros2 run my_tools showimage -r 0
+```
+![image](https://github.com/QQting/ros2_image_tools/blob/dashing/resource/image_receiver.png)
